@@ -160,7 +160,7 @@ final class WP_Mixpanel {
 			// Look in global /wp-content/languages/wp-mixpanel folder
 			load_textdomain( 'wp-mixpanel', $mofile_global );
 		} elseif ( file_exists( $mofile_local ) ) {
-			// Look in local /wp-content/plugins/easy-digital-downloads/languages/ folder
+			// Look in local /wp-content/plugins/wp-mixpanel/languages/ folder
 			load_textdomain( 'wp-mixpanel', $mofile_local );
 		} else {
 			// Load the default language files
