@@ -14,14 +14,13 @@ Track events, users, and e-commerce transactions through Mixpanel.com
 
 == Installation ==
 
-1. Upload the 'wp-butler' folder to the '/wp-content/plugins/' directory
-1. Activate the WP Butler plugin through the 'Plugins' menu in WordPress
-1. Press `shift+alt+b` or click on `WP Butler` in the Admin Bar on any admin page to launch WP Butler.
-1. Work Smarter and Faster!
+1. Upload the 'wp-mixpanel' folder to the '/wp-content/plugins/' directory
+2. Activate the WP Mixpanel plugin through the 'Plugins' menu in WordPress
+3. Follow the integration instructions below
 
 == Frequently Asked Questions ==
 
-
+= Coming soon =
 
 == Changelog ==
 
