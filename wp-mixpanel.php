@@ -228,7 +228,6 @@ final class WP_Mixpanel {
 	}
 
 
-
 	/**
 	 * Track a person. If the distinct_id already exists, the user will be updated
 	 *
@@ -329,6 +328,47 @@ final class WP_Mixpanel {
 
 		$response = wp_remote_post( $url, $post_params );
 
+	}
+
+
+	/**
+	 * Create alias
+	 *
+	 * @access private
+	 * @since 1.0
+	 * @return void
+	 */
+	public function create_alias( $distinct = '', $alias = '' ) {
+
+		if( empty( $distinct ) )
+			return; // A distinct_id is required
+
+		$params = array(
+			'event'      => 'create_alias',
+			'properties' => array(
+				'distinct_id' => $distinct,
+				'alias'       => $alias
+			)
+		);
+
+		if ( !isset( $params['properties']['token'] ) ){
+            $params['properties']['token'] = $this->mixpanel_project_id;
+        }
+
+		$url = $this->mixpanel_api_url . 'track/?data=' . base64_encode( json_encode( $params ) );
+
+		$post_params = array(
+			'method'      => 'POST',
+			'timeout'     => 10,
+			'redirection' => 5,
+			'httpversion' => '1.0',
+			'blocking'    => false,
+			'headers'     => array(),
+			'body'        => $params,
+			'cookies'     => array()
+    	);
+
+		$response = wp_remote_post( $url, $post_params );
 	}
 
 }
