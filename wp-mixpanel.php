@@ -344,7 +344,7 @@ final class WP_Mixpanel {
 			return; // A distinct_id is required
 
 		$params = array(
-			'event'      => 'create_alias',
+			'event'      => '$create_alias',
 			'properties' => array(
 				'distinct_id' => $distinct,
 				'alias'       => $alias
