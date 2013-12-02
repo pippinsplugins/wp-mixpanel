@@ -217,7 +217,7 @@ final class WP_Mixpanel {
 			'timeout'     => 10,
 			'redirection' => 5,
 			'httpversion' => '1.0',
-			'blocking'    => true,
+			'blocking'    => false,
 			'headers'     => array(),
 			'body'        => $params,
 			'cookies'     => array()
@@ -226,7 +226,6 @@ final class WP_Mixpanel {
 		$response = wp_remote_post( $url, $post_params );
 
 	}
-
 
 
 	/**
@@ -274,7 +273,7 @@ final class WP_Mixpanel {
 			'timeout'     => 10,
 			'redirection' => 5,
 			'httpversion' => '1.0',
-			'blocking'    => true,
+			'blocking'    => false,
 			'headers'     => array(),
 			'body'        => $params,
 			'cookies'     => array()
@@ -318,10 +317,10 @@ final class WP_Mixpanel {
 
 		$post_params = array(
 			'method'      => 'POST',
-			'timeout'     => 10,
+			'timeout'     => 15,
 			'redirection' => 5,
 			'httpversion' => '1.0',
-			'blocking'    => true,
+			'blocking'    => false,
 			'headers'     => array(),
 			'body'        => $params,
 			'cookies'     => array()
