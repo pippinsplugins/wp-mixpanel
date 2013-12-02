@@ -271,7 +271,7 @@ final class WP_Mixpanel {
 
 		$post_params = array(
 			'method'      => 'POST',
-			'timeout'     => 45,
+			'timeout'     => 10,
 			'redirection' => 5,
 			'httpversion' => '1.0',
 			'blocking'    => true,
@@ -318,7 +318,7 @@ final class WP_Mixpanel {
 
 		$post_params = array(
 			'method'      => 'POST',
-			'timeout'     => 45,
+			'timeout'     => 10,
 			'redirection' => 5,
 			'httpversion' => '1.0',
 			'blocking'    => true,
